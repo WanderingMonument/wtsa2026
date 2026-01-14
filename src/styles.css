@@ -110,3 +110,20 @@ button {
     background-color: #0f0f0f69;
   }
 }
+
+#settings {
+  background-color: #ffe21c;
+  padding: 1%;
+}
+header {
+  text-align: center;
+  width: 50%;
+  background-color: #396cd8;
+  padding: 1%;
+}
+menu {
+  
+  width: 50%;
+  background-color: #0f0f0f;
+  padding: 1%;
+}
