@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <RestoreSuccess Condition=" '$(RestoreSuccess)' == '' ">True</RestoreSuccess>
+    <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>
+    <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">$(MSBuildThisFileDirectory)project.assets.json</ProjectAssetsFile>
+    <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">$(UserProfile)\.nuget\packages\</NuGetPackageRoot>
+    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\echo\.nuget\packages\;C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages</NuGetPackageFolders>
+    <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
+    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">7.0.0</NuGetToolVersion>
+  </PropertyGroup>
+  <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <SourceRoot Include="C:\Users\echo\.nuget\packages\" />
+    <SourceRoot Include="C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages\" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Content Include="$(NuGetPackageRoot)igniteview.core\2.2.5\contentFiles\any\net9.0\iv2runtime\IgniteView.Core.igniteview" Condition="Exists('$(NuGetPackageRoot)igniteview.core\2.2.5\contentFiles\any\net9.0\iv2runtime\IgniteView.Core.igniteview')">
+      <NuGetPackageId>IgniteView.Core</NuGetPackageId>
+      <NuGetPackageVersion>2.2.5</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>iv2runtime\IgniteView.Core.igniteview</TargetPath>
+      <DestinationSubDirectory>iv2runtime\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>iv2runtime\IgniteView.Core.igniteview</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Content Include="$(NuGetPackageRoot)igniteview.desktop\2.2.5\contentFiles\any\net9.0\iv2runtime\linux-arm64\native\libIgniteView.Desktop.Native.so" Condition="Exists('$(NuGetPackageRoot)igniteview.desktop\2.2.5\contentFiles\any\net9.0\iv2runtime\linux-arm64\native\libIgniteView.Desktop.Native.so')">
+      <NuGetPackageId>IgniteView.Desktop</NuGetPackageId>
+      <NuGetPackageVersion>2.2.5</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>iv2runtime\linux-arm64\native\libIgniteView.Desktop.Native.so</TargetPath>
+      <DestinationSubDirectory>iv2runtime\linux-arm64\native\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>iv2runtime\linux-arm64\native\libIgniteView.Desktop.Native.so</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)igniteview.desktop\2.2.5\contentFiles\any\net9.0\iv2runtime\linux-x64\native\libIgniteView.Desktop.Native.so" Condition="Exists('$(NuGetPackageRoot)igniteview.desktop\2.2.5\contentFiles\any\net9.0\iv2runtime\linux-x64\native\libIgniteView.Desktop.Native.so')">
+      <NuGetPackageId>IgniteView.Desktop</NuGetPackageId>
+      <NuGetPackageVersion>2.2.5</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>iv2runtime\linux-x64\native\libIgniteView.Desktop.Native.so</TargetPath>
+      <DestinationSubDirectory>iv2runtime\linux-x64\native\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>iv2runtime\linux-x64\native\libIgniteView.Desktop.Native.so</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)igniteview.desktop\2.2.5\contentFiles\any\net9.0\iv2runtime\osx-universal\native\libIgniteView.Desktop.Native.dylib" Condition="Exists('$(NuGetPackageRoot)igniteview.desktop\2.2.5\contentFiles\any\net9.0\iv2runtime\osx-universal\native\libIgniteView.Desktop.Native.dylib')">
+      <NuGetPackageId>IgniteView.Desktop</NuGetPackageId>
+      <NuGetPackageVersion>2.2.5</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>iv2runtime\osx-universal\native\libIgniteView.Desktop.Native.dylib</TargetPath>
+      <DestinationSubDirectory>iv2runtime\osx-universal\native\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>iv2runtime\osx-universal\native\libIgniteView.Desktop.Native.dylib</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)igniteview.desktop\2.2.5\contentFiles\any\net9.0\iv2runtime\win-arm64\native\IgniteView.Desktop.Native.dll" Condition="Exists('$(NuGetPackageRoot)igniteview.desktop\2.2.5\contentFiles\any\net9.0\iv2runtime\win-arm64\native\IgniteView.Desktop.Native.dll')">
+      <NuGetPackageId>IgniteView.Desktop</NuGetPackageId>
+      <NuGetPackageVersion>2.2.5</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>iv2runtime\win-arm64\native\IgniteView.Desktop.Native.dll</TargetPath>
+      <DestinationSubDirectory>iv2runtime\win-arm64\native\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>iv2runtime\win-arm64\native\IgniteView.Desktop.Native.dll</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)igniteview.desktop\2.2.5\contentFiles\any\net9.0\iv2runtime\win-x64\native\IgniteView.Desktop.Native.dll" Condition="Exists('$(NuGetPackageRoot)igniteview.desktop\2.2.5\contentFiles\any\net9.0\iv2runtime\win-x64\native\IgniteView.Desktop.Native.dll')">
+      <NuGetPackageId>IgniteView.Desktop</NuGetPackageId>
+      <NuGetPackageVersion>2.2.5</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>iv2runtime\win-x64\native\IgniteView.Desktop.Native.dll</TargetPath>
+      <DestinationSubDirectory>iv2runtime\win-x64\native\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>iv2runtime\win-x64\native\IgniteView.Desktop.Native.dll</Link>
+    </Content>
+  </ItemGroup>
+</Project>

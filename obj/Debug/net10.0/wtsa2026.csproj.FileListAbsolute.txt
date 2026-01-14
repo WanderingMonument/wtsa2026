@@ -1,0 +1,5 @@
+C:\Users\echo\Documents\GitHub\wtsa2026\obj\Debug\net10.0\wtsa2026.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\echo\Documents\GitHub\wtsa2026\obj\Debug\net10.0\wtsa2026.AssemblyInfoInputs.cache
+C:\Users\echo\Documents\GitHub\wtsa2026\obj\Debug\net10.0\wtsa2026.AssemblyInfo.cs
+C:\Users\echo\Documents\GitHub\wtsa2026\obj\Debug\net10.0\wtsa2026.csproj.CoreCompileInputs.cache
+C:\Users\echo\Documents\GitHub\wtsa2026\obj\Debug\net10.0\wtsa2026.sourcelink.json
