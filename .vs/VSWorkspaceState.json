@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src-vite",
+    "\\src-vite\\src"
   ],
-  "SelectedNode": "\\obj",
+  "SelectedNode": "\\src-vite\\src\\style.css",
   "PreviewInSolutionExplorer": false
 }

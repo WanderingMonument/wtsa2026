@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("wtsa2026")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ff1e5e5bdf79845a90dd6aa51135927ce37b784c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+22afc45e806d7f75ddaf499e18902c3edfc236e6")]
 [assembly: System.Reflection.AssemblyProductAttribute("wtsa2026")]
 [assembly: System.Reflection.AssemblyTitleAttribute("wtsa2026")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
