@@ -16,6 +16,7 @@
 ## usefuliteis
 - the index.html is in /src-vite
 - js and css files should probably go in /src-vite/src
+- While the entire frontend will hot reload, any changes in c# will require you to restart the debugger
 
 - https://software.samsidparty.com/IgniteView/docs/category/quick-start
 - https://vite.dev/

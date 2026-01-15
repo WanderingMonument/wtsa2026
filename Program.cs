@@ -1,5 +1,6 @@
 ﻿using IgniteView.Core;
 using IgniteView.Desktop;
+using System.Drawing;
 
 public class Program
 {
@@ -15,5 +16,14 @@ public class Program
             .Show();
 
         app.Run();
+    }
+}
+
+public class Commands
+{
+    [Command("screenshot")]
+    public static string Screenshot()
+    {
+        return ("this is a value returned from C#!");
     }
 }
