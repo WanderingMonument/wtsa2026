@@ -1,13 +1,9 @@
-.logo.vanilla:hover {
-    filter: drop-shadow(0 0 2em #ffe21c);
-}
-
 :root {
     font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
-    color: #0f0f0f;
+    color: #000000;
     /*background-color: #f6f6f6; none will make it acrylic*/
     font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -23,22 +19,6 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
-}
-
-.logo {
-    height: 6em;
-    padding: 1.5em;
-    will-change: filter;
-    transition: 0.75s;
-}
-
-    .logo.tauri:hover {
-        filter: drop-shadow(0 0 2em #24c8db);
-    }
-
-.row {
-    display: flex;
-    justify-content: center;
 }
 
 a {
@@ -94,7 +74,7 @@ button {
 @media (prefers-color-scheme: dark) {
     :root {
         color: #f6f6f6;
-        /*background-color: #2f2f2f;*/
+        background-color: #2f2f2f;
     }
 
     a:hover {
@@ -112,20 +92,32 @@ button {
         }
 }
 
-#settings {
-    background-color: #ffe21c;
-    padding: 1%;
+body{
+    margin: 0;
+    padding: 0;
 }
 
-header {
-    text-align: center;
-    width: 50%;
-    background-color: #396cd8;
-    padding: 1%;
+#main {
+    float: left;
+    padding-inline: 2.5vw;
 }
+    #falseheader{
+        padding-block: 0;
+        padding-inline: 0;
+    }
+        #title{
+            padding-block: 2.5vh;
+        }
 
-menu {
-    width: 50%;
-    background-color: #0f0f0f;
-    padding: 1%;
+aside {
+    height: 100vh;
+    float: right;
+    background-color: rgb(52, 48, 53);
+    padding-inline: 10vh;
+    border-width: 0.2vw;
+    border-color: #979797;
+    border-style: solid;
+    border-right: 0;
+    border-top: 0;
+    border-bottom: 0;
 }
