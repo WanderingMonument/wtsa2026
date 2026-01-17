@@ -6,9 +6,9 @@
   },
   "private": true,
   "scripts": {
-    "dev": "vite --host",
-    "build": "vite build --host",
-    "preview": "vite preview --host"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "type": "module",
   "dependencies": {
