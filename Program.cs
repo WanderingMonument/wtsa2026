@@ -45,10 +45,15 @@ public class Commands
         Bitmap bmp = new Bitmap(width, height); // init a blank image to work with
         Graphics graphics = Graphics.FromImage(bmp); // create a graphics object from the bitmap so we can use CopyFromScreen
         graphics.CopyFromScreen(x, y, 0, 0, new System.Drawing.Size(width, height));
-        bmp.Save("screenshot.jpg", ImageFormat.Jpeg);
 
+        // save to memory to be used later
+        System.IO.MemoryStream stream = new System.IO.MemoryStream();
+        bmp.Save(stream, ImageFormat.Jpeg);
 
-        string filepath = System.IO.Path.GetFullPath("screenshot.jpg");
-        return (filepath);
+        // convert the image to base64 because i have no idea how else to send the image to javascript
+        byte[] img_bytes = stream.ToArray();
+        string img_base64 = Convert.ToBase64String(img_bytes);
+
+        return (img_base64);
     }
 }
