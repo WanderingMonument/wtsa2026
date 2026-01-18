@@ -31,17 +31,24 @@ public class Commands
 { 
 
     [Command("screenshot")]
-    public static string Screenshot(int x, int y, int width, int height)
+    public static string Screenshot()
     {
-        
-        Bitmap bmp = new Bitmap(width, height);
-        Graphics graphics = Graphics.FromImage(bmp);
-        graphics.CopyFromScreen(x, y, 0, 0, new System.Drawing.Size(width, height));
-        bmp.Save("screenshot.jpeg", ImageFormat.Jpeg);
-        
-        Window1 window = new Window1();
-        window.Show();
 
-        return ("this is a value returned from C#!");
+        screenshotWindow window = new screenshotWindow();
+        Dictionary<string, double> value = window.screenSelect();
+
+        int x = ((int)value["x"]);
+        int y = ((int)value["y"]);
+        int width = ((int)value["width"]);
+        int height = ((int)value["height"]);
+
+        Bitmap bmp = new Bitmap(width, height); // init a blank image to work with
+        Graphics graphics = Graphics.FromImage(bmp); // create a graphics object from the bitmap so we can use CopyFromScreen
+        graphics.CopyFromScreen(x, y, 0, 0, new System.Drawing.Size(width, height));
+        bmp.Save("screenshot.jpg", ImageFormat.Jpeg);
+
+
+        string filepath = System.IO.Path.GetFullPath("screenshot.jpg");
+        return (filepath);
     }
 }

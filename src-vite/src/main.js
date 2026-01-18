@@ -29,7 +29,7 @@ setupCounter(document.querySelector('#counter'))
 
 async function greet() {
 
-    const username = await igniteView.commandBridge.screenshot(0,0,100,100);
+    const username = await igniteView.commandBridge.screenshot();
     console.log(username);
 }
 
