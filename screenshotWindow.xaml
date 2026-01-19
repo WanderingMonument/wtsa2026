@@ -12,6 +12,7 @@
         >
 
     <Grid>
-        <Rectangle HorizontalAlignment="Left" Name="selectionRect" Height="196" Stroke="Red" VerticalAlignment="Top" Width="0" Margin="45,43,0,0"/>
+        <Rectangle HorizontalAlignment="Left" Name="selectionRect" Height="196" Stroke="White" VerticalAlignment="Top" Width="0" Margin="45,43,0,0"/>
+        <Label Content="Drag to make a selection..." HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
     </Grid>
 </Window>

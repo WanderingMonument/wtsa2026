@@ -14,14 +14,15 @@ public class Program
         DesktopPlatformManager.Activate();
         var app = new ViteAppManager();
 
-    
+        var bounds = new WindowBounds(1260, 680);
+        bounds.MinWidth = 1260;
+        bounds.MinHeight = 680;
 
         var mainWindow =
             WebWindow.Create()
             .WithTitle("Visual Assistant")
+            .WithBounds(bounds)
             .Show();
-        
-            
 
         app.Run();
     }

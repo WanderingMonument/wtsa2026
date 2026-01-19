@@ -5,6 +5,9 @@
     <TargetFramework>net10.0-windows</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
 	<UseWPF>true</UseWPF>
+	<RuntimeIdentifiers>win-x64</RuntimeIdentifiers>
+	<PublishSingleFile>true</PublishSingleFile>
+	<SelfContained>true</SelfContained>
     <Nullable>enable</Nullable>
 
   </PropertyGroup>
@@ -13,7 +16,6 @@
   <ItemGroup>
       <PackageReference Include="IgniteView.Desktop" Version="*" />
       <PackageReference Include="IgniteView.Core" Version="*" />
-      <PackageReference Include="System.Drawing.Common" Version="10.0.2" />
   </ItemGroup>
   <PropertyGroup>
       <DisableFastUpToDateCheck>true</DisableFastUpToDateCheck>

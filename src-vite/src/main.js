@@ -30,7 +30,7 @@ setupCounter(document.querySelector('#counter'))
 import OpenAI from "openai";
 
 const client = new OpenAI({
-    apiKey: 'API_KEY_GOES_HERE',
+    apiKey: 'sk-voidai-loahJybpl-oBGcFwZRf4d6OuxFnqOLHkjn9g5dU1M-0j-EJcchiaLtdLiue3EcKmidGv6gufPWowkaTJvg6uWi00zFOvynUReFrwNHNBVjKBWhKYVSXsFtUmWj-MmnE_6pM1Ow',
     baseURL: 'https://api.voidai.app/v1',
     dangerouslyAllowBrowser: true
 });
@@ -40,28 +40,36 @@ async function takeScreenshot() {
     // takes in images encoded in base64 to be displayed
     const image = await igniteView.commandBridge.screenshot();
     document.querySelector("#ss-image").src = "data:image/jpeg;base64," + image;
-    document.getElementById("voidai-result").textContent = "";
+    document.getElementById("voidai-result").textContent = "generatng";
 
     // sends an http request to voidai with the image data
-    const response = await client.chat.completions.create({
-        model: 'gpt-5.1',
-        messages: [
-            { role: 'system', content: 'You are a helpful assistant designed to describe the contents of screenshots provided to you for accessibility purposes. Keep the responses somewhat brief.' },
-            {
-                role: 'user', content: [
-                    { "type": "text", "text": "Describe this screenshot" },
-                    {
-                        "type": "image_url",
-                        "image_url": {
-                            "url": "data:image/jpeg;base64," + image
+    try {
+        const response = await client.chat.completions.create({
+            model: 'gpt-5.1',
+            messages: [
+                { role: 'system', content: 'You are a helpful assistant designed to describe the contents of screenshots provided to you for accessibility purposes. Keep the responses somewhat brief.' },
+                {
+                    role: 'user', content: [
+                        { "type": "text", "text": "Describe this screenshot" },
+                        {
+                            "type": "image_url",
+                            "image_url": {
+                                "url": "data:image/jpeg;base64," + image
+                            }
                         }
-                    }
-                ]
-            }
-        ]
-    });
+                    ]
+                }
+            ]
+        });
+        document.getElementById("voidai-result").textContent = response.choices[0].message.content;
 
-    document.getElementById("voidai-result").textContent = response.choices[0].message.content;
+        var msg = new SpeechSynthesisUtterance(response.choices[0].message.content);
+        window.speechSynthesis.speak(msg);
+    }
+    catch(error) {
+        document.getElementById("voidai-result").textContent = error;
+    }
+    
 
 }
 

@@ -36,6 +36,7 @@ namespace wtsa2026
             isTakingScreenshot = false; 
             secondPoint = e.GetPosition(this);
 
+
             // after so much trial and error and documentation reading it turns out theres a math function to get minimum values and i just didn't notice
             // gets the lower value between the begining and endings mouse positions, as well as the width and height and applies it to the rectangle
             double x_pos = Math.Min(firstPoint.X, secondPoint.X);
@@ -46,6 +47,11 @@ namespace wtsa2026
 
             selectionRect.Width = width;
             selectionRect.Height = height;
+            if (width <= 0 || height <= 0)
+            {
+                return;
+            }
+
             selectionRect.Margin = new Thickness(x_pos, y_pos, 0, 0);
             Close();
         }
