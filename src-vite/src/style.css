@@ -98,17 +98,21 @@ body{
 }
 
 #main {
-    float: left;
+    padding-top: 100px;
     padding-inline: 2.5vw;
 }
-    #falseheader{
-        padding-block: 0;
-        padding-inline: 0;
-    }
-        #title{
-            padding-block: 2.5vh;
-            font-weight:600
-        }
+
+#falseheader{
+    padding-block: 0;
+    padding-inline: 0;
+    position: fixed;
+    left: 50px
+}
+
+#title{
+    padding-block: 2.5vh;
+    font-weight:600
+}
 
 aside {
     height: 100vh;

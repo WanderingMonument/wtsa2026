@@ -29,34 +29,39 @@ setupCounter(document.querySelector('#counter'))
 
 import OpenAI from "openai";
 
-//const client = new OpenAI({
-//    apiKey: 'not commiting the api key here',
-//    baseURL: 'https://api.voidai.app/v1',
-//    dangerouslyAllowBrowser: true
-//});
+const client = new OpenAI({
+    apiKey: 'API_KEY_GOES_HERE',
+    baseURL: 'https://api.voidai.app/v1',
+    dangerouslyAllowBrowser: true
+});
 
 async function takeScreenshot() {
 
     // takes in images encoded in base64 to be displayed
     const image = await igniteView.commandBridge.screenshot();
     document.querySelector("#ss-image").src = "data:image/jpeg;base64," + image;
+    document.getElementById("voidai-result").textContent = "";
 
-    // DOES NOT WORK (for some fricking reason)
-    //const response = await client.chat.completions.create({
-    //    model: 'gpt-4.1',
-    //    messages: [
-    //        { role: 'system', content: 'You are a helpful assistant designed to describe the contents of screenshots provided to you.' },
-    //        {
-    //            role: 'user', content: [
-    //                { "type": "text", "text": "Describe this screenshot" },
-    //                { "type": "image_url", "image_url": "data:image/jpeg;base64," + image }
-    //            ]
-    //        }
-    //    ]
-    //});
-    //
-    //
-    //document.querySelector("#voidai-result").text = response.output_text;
+    // sends an http request to voidai with the image data
+    const response = await client.chat.completions.create({
+        model: 'gpt-5.1',
+        messages: [
+            { role: 'system', content: 'You are a helpful assistant designed to describe the contents of screenshots provided to you for accessibility purposes. Keep the responses somewhat brief.' },
+            {
+                role: 'user', content: [
+                    { "type": "text", "text": "Describe this screenshot" },
+                    {
+                        "type": "image_url",
+                        "image_url": {
+                            "url": "data:image/jpeg;base64," + image
+                        }
+                    }
+                ]
+            }
+        ]
+    });
+
+    document.getElementById("voidai-result").textContent = response.choices[0].message.content;
 
 }
 
