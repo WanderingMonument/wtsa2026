@@ -5,14 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:wtsa2026"
         mc:Ignorable="d"
-        Title="Window1" Height="450" Width="800" Background="#66000000" WindowStyle="None" AllowsTransparency="True" ResizeMode="NoResize" WindowState="Maximized" IsTabStop="False" Topmost="True"
+        Title="Window1" Height="450" Width="800" Background="#99000000" WindowStyle="None" AllowsTransparency="True" ResizeMode="NoResize" WindowState="Maximized" IsTabStop="False" Topmost="True"
         MouseDown="Window_MouseDown"
         MouseUp="Window_MouseUp"
         MouseMove="Window_MouseMove"
         >
 
+
+
     <Grid>
         <Rectangle HorizontalAlignment="Left" Name="selectionRect" Height="196" Stroke="White" VerticalAlignment="Top" Width="0" Margin="45,43,0,0"/>
-        <Label Content="Drag to make a selection..." HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+        <Label x:Name="instructionLabel" Content="Click and drag to select a region" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="White" FontSize="48" Margin="0,10,0,0"/>
     </Grid>
 </Window>

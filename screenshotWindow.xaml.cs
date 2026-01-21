@@ -28,6 +28,7 @@ namespace wtsa2026
         {
             // record first point for future use and enable the Mouse_move function below
             firstPoint = e.GetPosition(this);
+            instructionLabel.Content = "";
             isTakingScreenshot = true;
         }
 
@@ -49,6 +50,7 @@ namespace wtsa2026
             selectionRect.Height = height;
             if (width <= 0 || height <= 0)
             {
+                instructionLabel.Content = "Click and drag to select a region";
                 return;
             }
 

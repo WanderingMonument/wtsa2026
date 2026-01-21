@@ -4,13 +4,15 @@
     line-height: 24px;
     font-weight: 400;
     color: #000000;
-    /*background-color: #f6f6f6; none will make it acrylic*/
+    color-scheme: light dark;
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
+
 }
+
 
 .container {
     margin: 0;
@@ -92,7 +94,7 @@ button {
         }
 }
 
-body{
+body {
     margin: 0;
     padding: 0;
 }
@@ -115,15 +117,18 @@ body{
 }
 
 aside {
-    height: 100vh;
-    float: right;
-    background-color: rgba(52, 48, 53, 0.5);
-    padding-inline: 10vh;
-    border-width: 0.2vw;
-    border-color: #979797;
-    border-style: solid;
-    border-right: 0;
-    border-top: 0;
-    border-bottom: 0;
+    position: fixed;
+    right: 0;
+    width: 190px;
+    height: 100%;
+    background-color: var(--system-body);
+    padding-inline: 25px
     
+}
+
+#inner-window {
+    border-radius: 0px 10px 0px 0px;
+    height: 100vh;
+    margin-right: 240px;
+    background-color: light-dark(rgba(155, 155, 155, 0.2), rgba(0, 0, 0, 0.2));
 }

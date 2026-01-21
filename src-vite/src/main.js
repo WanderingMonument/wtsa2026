@@ -47,7 +47,7 @@ async function takeScreenshot() {
         const response = await client.chat.completions.create({
             model: 'gpt-5.1',
             messages: [
-                { role: 'system', content: 'You are a helpful assistant designed to describe the contents of screenshots provided to you for accessibility purposes. Keep the responses somewhat brief.' },
+                { role: 'system', content: 'You are a helpful assistant designed to describe the contents of screenshots provided to you for accessibility purposes. Keep the responses short, not too long.' },
                 {
                     role: 'user', content: [
                         { "type": "text", "text": "Describe this screenshot" },
@@ -64,7 +64,11 @@ async function takeScreenshot() {
         document.getElementById("voidai-result").textContent = response.choices[0].message.content;
 
         var msg = new SpeechSynthesisUtterance(response.choices[0].message.content);
-        window.speechSynthesis.speak(msg);
+
+        if (document.getElementById("morning").checked) {
+            window.speechSynthesis.speak(msg);
+        }
+        
     }
     catch(error) {
         document.getElementById("voidai-result").textContent = error;
