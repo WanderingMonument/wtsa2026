@@ -44,26 +44,19 @@ async function takeScreenshot() {
 
     // sends an http request to voidai with the image data
     try {
-        const response = await client.chat.completions.create({
-            model: 'gpt-5.1',
-            messages: [
-                { role: 'system', content: 'You are a helpful assistant designed to describe the contents of screenshots provided to you for accessibility purposes. Keep the responses short, not too long.' },
-                {
-                    role: 'user', content: [
-                        { "type": "text", "text": "Describe this screenshot" },
-                        {
-                            "type": "image_url",
-                            "image_url": {
-                                "url": "data:image/jpeg;base64," + image
-                            }
-                        }
-                    ]
-                }
-            ]
+        const response = await fetch("https://long-dew-6497.echorw927-c17.workers.dev/", {
+            method: "POST",
+            headers: {
+                "Content-Type": "text/plain",
+            },
+            body: image,
         });
-        document.getElementById("voidai-result").textContent = response.choices[0].message.content;
 
-        var msg = new SpeechSynthesisUtterance(response.choices[0].message.content);
+        const responseText = await response.text();
+
+        document.getElementById("voidai-result").textContent = responseText;
+
+        var msg = new SpeechSynthesisUtterance(responseText);
 
         if (document.getElementById("morning").checked) {
             window.speechSynthesis.speak(msg);
